@@ -1,0 +1,15 @@
+C:\UCB\Documents\GitHub\SIS112\mi primer proprama en C#\bin\Debug\net8.0\mi primer proprama en C#.exe
+C:\UCB\Documents\GitHub\SIS112\mi primer proprama en C#\bin\Debug\net8.0\mi primer proprama en C#.deps.json
+C:\UCB\Documents\GitHub\SIS112\mi primer proprama en C#\bin\Debug\net8.0\mi primer proprama en C#.runtimeconfig.json
+C:\UCB\Documents\GitHub\SIS112\mi primer proprama en C#\bin\Debug\net8.0\mi primer proprama en C#.dll
+C:\UCB\Documents\GitHub\SIS112\mi primer proprama en C#\bin\Debug\net8.0\mi primer proprama en C#.pdb
+C:\UCB\Documents\GitHub\SIS112\mi primer proprama en C#\obj\Debug\net8.0\mi primer proprama en C#.GeneratedMSBuildEditorConfig.editorconfig
+C:\UCB\Documents\GitHub\SIS112\mi primer proprama en C#\obj\Debug\net8.0\mi primer proprama en C#.AssemblyInfoInputs.cache
+C:\UCB\Documents\GitHub\SIS112\mi primer proprama en C#\obj\Debug\net8.0\mi primer proprama en C#.AssemblyInfo.cs
+C:\UCB\Documents\GitHub\SIS112\mi primer proprama en C#\obj\Debug\net8.0\mi primer proprama en C#.csproj.CoreCompileInputs.cache
+C:\UCB\Documents\GitHub\SIS112\mi primer proprama en C#\obj\Debug\net8.0\mi primer proprama en C#.sourcelink.json
+C:\UCB\Documents\GitHub\SIS112\mi primer proprama en C#\obj\Debug\net8.0\mi primer proprama en C#.dll
+C:\UCB\Documents\GitHub\SIS112\mi primer proprama en C#\obj\Debug\net8.0\refint\mi primer proprama en C#.dll
+C:\UCB\Documents\GitHub\SIS112\mi primer proprama en C#\obj\Debug\net8.0\mi primer proprama en C#.pdb
+C:\UCB\Documents\GitHub\SIS112\mi primer proprama en C#\obj\Debug\net8.0\mi primer proprama en C#.genruntimeconfig.cache
+C:\UCB\Documents\GitHub\SIS112\mi primer proprama en C#\obj\Debug\net8.0\ref\mi primer proprama en C#.dll
