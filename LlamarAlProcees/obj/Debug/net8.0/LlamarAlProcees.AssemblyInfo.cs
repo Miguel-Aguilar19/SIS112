@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("mi primer proprama en C#")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("LlamarAlProcees")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d4ab9abcac438379bc65558e13960ca022c60dea")]
-[assembly: System.Reflection.AssemblyProductAttribute("mi primer proprama en C#")]
-[assembly: System.Reflection.AssemblyTitleAttribute("mi primer proprama en C#")]
+[assembly: System.Reflection.AssemblyProductAttribute("LlamarAlProcees")]
+[assembly: System.Reflection.AssemblyTitleAttribute("LlamarAlProcees")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.
