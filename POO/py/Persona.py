@@ -1,6 +1,6 @@
 class Persona:
     #   Method -> constructor
-    def _init_(self, nombre, edad, carrera):
+    def __init__(self, nombre, edad, carrera):
         self.nombre = nombre 
         self.edad = edad
         self.carrera = carrera
