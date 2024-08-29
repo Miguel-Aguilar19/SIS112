@@ -13,15 +13,40 @@
             </div>
             <div class="card-body">
                 <img src="perfil.png" width="100px" height="100px" alt="Imagen de perfil">
+                <img src="perfil2.png" width="100px" height="100px" alt="Imagen de perfil">
+                <img src="perfil3.png" width="100px" height="100px" alt="Imagen de perfil">
                 <h5 class="card-title" id="saludar"></h5>
                 <p class="card-text" id="edad"></p>
                 <p class="card-text" id="carrera"></p>
+                <p class="card-text" id="universidad"></p>
+              
+
+                <h1>CREAR<h1>
                 <button class="btn btn-primary" onclick="botonSaludar()">Saludar</button>
                 <button class="btn btn-primary" onclick="botonCumpleanios()">Edad</button>
                 <button class="btn btn-secondary" onclick="botonEstudiar()">Carrera</button>
+                <button class="btn btn-secondary" onclick="botonUni()">Universidad</button>
+
+                <h1>MODIFICAR<h1>
+                <button class="btn btn-secondary" onclick="botonModificar_Saludar()">Modificar Saludo</button>
+                <button class="btn btn-secondary" onclick="botonModificar_Cumple()">Modificar Edad</button>
+                <button class="btn btn-secondary" onclick="botonModificar_Carrera()">Modificar Carrera</button>
+                <button class="btn btn-secondary" onclick="botonModificar_Universidad()">Modificar Universidad</button>
+
+                <h1>ELIMINAR<h1>
+                <button class="btn btn-primary" onclick="botonEliminar_Nombre()">Eliminar saludo</button>
+                <button class="btn btn-primary" onclick="botonEliminar_Edad()">Eliminar edad</button>
+                <button class="btn btn-secondary" onclick="botonEliminar_Carrera()">Eliminar carrera</button>
+                <button class="btn btn-secondary" onclick="botonEliminar_Universidad()">Eliminar universidad</button>   
+
+
+
+
             </div>
         </div>
     </div>
+
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="persona.js"></script>
 </body>
