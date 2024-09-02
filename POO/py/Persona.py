@@ -14,7 +14,7 @@ class Persona:
 
     # Métodos para modificar los atributos
     def modificar_nombre(self, nuevo_nombre):
-        if not nuevo_nombre.strip() or not all(char.isalpha() or char.isspace() for char in nuevo_nombre):
+        if not nuevo_nombre.strip() or not all(char.isalpha() for char in nuevo_nombre):
          print("Error: El nombre no debe estar vacío ni contener digitos o signos.")
         else:
          self.nombre = nuevo_nombre
@@ -28,14 +28,14 @@ class Persona:
         print(f"Edad ha sido modificada a: {self.edad}")
 
     def modificar_carrera(self, nueva_carrera):
-        if not nueva_carrera.strip() or not all(char.isalpha() or char.isspace() for char in nueva_carrera):
+        if not nueva_carrera.strip() or not all(char.isalpha() for char in nueva_carrera):
             print("Error: La carrera no debe estar vacio ni contener digitos o signos.")
         else:
             self.carrera = nueva_carrera
             print(f"Carrera ha sido modificado a: {self.carrera}")
 
     def modificar_universidad(self, nueva_universidad):
-        if not nueva_universidad.strip() or not all(char.isalpha() or char.isspace() for char in nueva_universidad):
+        if not nueva_universidad.strip() or not all(char.isalpha() for char in nueva_universidad):
             print("Error. Universidad no debe estar vacio ni contener digitos o signos. ")
         else:
             self.universidad = nueva_universidad
