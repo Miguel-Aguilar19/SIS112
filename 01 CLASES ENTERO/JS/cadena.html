@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación de Cadenas</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #acb6e5);
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #ffffff;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 25px;
+            border: 1px solid #ccc;
+            font-size: 1.1em;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        button {
+            background: linear-gradient(to right, #ff6a00, #ee0979);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        button:hover {
+            background: linear-gradient(to right, #ee0979, #ff6a00);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        #resultado {
+            margin-top: 30px;
+            padding: 20px;
+            border: 2px solid #4a90e2;
+            border-radius: 15px;
+            background-color: #f1f1f1;
+            width: 80%;
+            max-width: 600px;
+            margin: 30px auto;
+            font-size: 1.3em;
+            color: #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Manipulación de Cadenas</h1>
+    
+    <input type="text" id="inputCadena" placeholder="Introduce una cadena" />
+    
+    <div class="button-container">
+        <button onclick="ejecutar('getCadena')">Obtener Cadena</button>
+        <button onclick="ejecutar('concatenar')">Concatenar</button>
+        <button onclick="ejecutar('invertir')">Invertir</button>
+        <button onclick="ejecutar('esVacia')">¿Es Vacía?</button>
+        <button onclick="ejecutar('contiene')">Contiene Subcadena</button>
+        <button onclick="ejecutar('comienzaCon')">Comienza Con</button>
+        <button onclick="ejecutar('terminaCon')">Termina Con</button>
+        <button onclick="ejecutar('longitud')">Longitud</button>
+        <button onclick="ejecutar('aMayusculas')">A Mayúsculas</button>
+        <button onclick="ejecutar('aMinusculas')">A Minúsculas</button>
+    </div>
+
+    <div id="resultado"></div>
+
+    <script src="cadena.js"></script>
+</body>
+</html>
