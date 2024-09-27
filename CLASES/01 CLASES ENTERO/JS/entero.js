@@ -2,6 +2,7 @@ class Entero {
     //atributos
     Num;
 
+
     //constructor = inicializa el objeto
     constructor(Num) {
         this.Num = Num;  
@@ -50,8 +51,12 @@ class Entero {
     Posi_Nega() {
         return(this.Num >= 0)
     }
+    
+
+
 
 }
+
 
 //las funciones = button HTML
 var ClaseEntero = new Entero(0);  // Inicializado en 0
@@ -84,6 +89,7 @@ function esParImparNum() {
     var resp = respuesta ? "Es num par": "Es num impar";
     ClaseEntero.showResultado(resp)
 }
+
 
 //par o impar
 function Posi_NegaNum() {
