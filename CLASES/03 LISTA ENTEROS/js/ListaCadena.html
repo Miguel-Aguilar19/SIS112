@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación de Cadenas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Courier New', Courier, monospace;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .container {
+            background-color: rgba(43, 43, 43, 0.8);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 400px;
+            border: 1px solid #61dafb;
+            z-index: 1;
+        }
+
+        h1 {
+            color: #61dafb;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            width: 80%;
+            background-color: #333;
+            color: #61dafb;
+            font-size: 16px;
+        }
+
+        input::placeholder {
+            color: #888;
+        }
+
+        button {
+            padding: 10px 25px;
+            margin: 5px;
+            background-color: #61dafb;
+            color: #1e1e1e;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #21a1f1;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        ul li {
+            background-color: #333;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            color: #61dafb;
+            border: 1px solid #444;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
+        }
+
+        h3 {
+            color: #61dafb;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="fondoAnimado"></canvas>
+
+    <div class="container">
+        <h1>Manipulación de Cadenas</h1>
+        
+        <input type="text" id="cadenaInput" placeholder="Introduce una cadena">
+        
+        <div>
+            <button id="agregarBtn">Agregar</button>
+            <button id="eliminarBtn">Eliminar</button>
+            <button id="buscarBtn">Buscar</button>
+            <button id="ordenarBtn">Ordenar</button>
+        </div>
+
+        <h3>Lista de Cadenas</h3>
+        <ul id="listaNumeros"></ul>
+
+        <h3 id="resultadoBusqueda"></h3>
+    </div>
+
+    <script src="ListaCadena.js"></script>
+
+    <script>
+        const canvas = document.getElementById('fondoAnimado');
+        const ctx = canvas.getContext('2d');
+        let particlesArray = [];
+        const numberOfParticles = 100;
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 5 + 1;
+                this.speedX = Math.random() * 3 - 1.5;
+                this.speedY = Math.random() * 3 - 1.5;
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                if (this.size > 0.2) this.size -= 0.1;
+            }
+
+            draw() {
+                ctx.fillStyle = '#61dafb';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.closePath();
+                ctx.fill();
+            }
+        }
+
+        function init() {
+            particlesArray = [];
+            for (let i = 0; i < numberOfParticles; i++) {
+                particlesArray.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < particlesArray.length; i++) {
+                particlesArray[i].update();
+                particlesArray[i].draw();
+            }
+            requestAnimationFrame(animate);
+        }
+
+        init();
+        animate();
+    </script>
+</body>
+</html>
+
+
+
