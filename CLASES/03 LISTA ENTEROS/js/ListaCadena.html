@@ -16,7 +16,9 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            background-color: #282c34;
         }
+
 
         canvas {
             position: absolute;
@@ -24,6 +26,7 @@
             left: 0;
             z-index: -1;
         }
+
 
         .container {
             background-color: rgba(43, 43, 43, 0.8);
@@ -36,11 +39,13 @@
             z-index: 1;
         }
 
+
         h1 {
             color: #61dafb;
             font-size: 24px;
             margin-bottom: 20px;
         }
+
 
         input {
             padding: 10px;
@@ -53,9 +58,11 @@
             font-size: 16px;
         }
 
+
         input::placeholder {
             color: #888;
         }
+
 
         button {
             padding: 10px 25px;
@@ -69,15 +76,18 @@
             transition: all 0.3s ease;
         }
 
+
         button:hover {
             background-color: #21a1f1;
         }
+
 
         ul {
             list-style-type: none;
             padding: 0;
             margin-top: 20px;
         }
+
 
         ul li {
             background-color: #333;
@@ -86,9 +96,9 @@
             border-radius: 5px;
             color: #61dafb;
             border: 1px solid #444;
-            font-family: 'Courier New', Courier, monospace;
             font-size: 16px;
         }
+
 
         h3 {
             color: #61dafb;
@@ -97,13 +107,15 @@
 </head>
 <body>
 
+
     <canvas id="fondoAnimado"></canvas>
+
 
     <div class="container">
         <h1>Manipulación de Cadenas</h1>
-        
+       
         <input type="text" id="cadenaInput" placeholder="Introduce una cadena">
-        
+       
         <div>
             <button id="agregarBtn">Agregar</button>
             <button id="eliminarBtn">Eliminar</button>
@@ -111,13 +123,17 @@
             <button id="ordenarBtn">Ordenar</button>
         </div>
 
+
         <h3>Lista de Cadenas</h3>
         <ul id="listaNumeros"></ul>
+
 
         <h3 id="resultadoBusqueda"></h3>
     </div>
 
+
     <script src="ListaCadena.js"></script>
+
 
     <script>
         const canvas = document.getElementById('fondoAnimado');
@@ -125,13 +141,16 @@
         let particlesArray = [];
         const numberOfParticles = 100;
 
+
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
+
 
         window.addEventListener('resize', () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
         });
+
 
         class Particle {
             constructor() {
@@ -142,12 +161,15 @@
                 this.speedY = Math.random() * 3 - 1.5;
             }
 
+
             update() {
                 this.x += this.speedX;
                 this.y += this.speedY;
 
+
                 if (this.size > 0.2) this.size -= 0.1;
             }
+
 
             draw() {
                 ctx.fillStyle = '#61dafb';
@@ -158,12 +180,14 @@
             }
         }
 
+
         function init() {
             particlesArray = [];
             for (let i = 0; i < numberOfParticles; i++) {
                 particlesArray.push(new Particle());
             }
         }
+
 
         function animate() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -174,11 +198,20 @@
             requestAnimationFrame(animate);
         }
 
+
         init();
         animate();
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
 
 
 
