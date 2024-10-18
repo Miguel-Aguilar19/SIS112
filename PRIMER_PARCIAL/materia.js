@@ -170,7 +170,7 @@ class Materia {
 
 
   modificar_Ubicacion_LL() {
-    const nuevaUbicacion = prompt('Ingrese la ubicación:', this.aula);
+    const nuevaUbicacion = prompt('Ingrese la ubicación:', this.ubicacion_LL);
     const regexUbicacion = /^\s*\(?-?\d+(\.\d+)?,-?\d+(\.\d+)?\)?\s*$/;
     const ubicacionValida = regexUbicacion.test(nuevaUbicacion);
  
