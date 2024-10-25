@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tank Shoot 2D</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: "Courier New", Courier, monospace;
+            text-align: center;
+            flex-direction: column;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 64, 0, 0.6);
+        }
+        h1 {
+            font-size: 60px;
+            color: #FF4000;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .highscore {
+            font-size: 24px;
+            color: #FFF700;
+            margin-bottom: 10px;
+        }
+        .game-button {
+            display: inline-block;
+            padding: 20px 80px;
+            margin-top: 30px;
+            font-size: 26px;
+            background-color: #333;
+            color: white;
+            border: 2px solid #FF4000;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .game-button:hover {
+            background-color: #FF4000;
+            transform: scale(1.05);
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 16px;
+            color: #FFF;
+        }
+        .footer a {
+            color: #FFF700;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="highscore">HIGH SCORE 1700</p>
+        <h1>TANK SHOOT 2D</h1>
+        <p>Version 1.003 (c) Darksun Tech 2010-2019</p>
+        <a href="tank-shoot.html" class="game-button">Jugar Ahora</a>
+        <div class="footer">
+            <p>Visítanos en <a href="http://www.tankshoot.com">www.tankshoot.com</a></p>
+        </div>
+    </div>
+
+    <div>
+        <h1>Bienvenido a Tank Shoot</h1>
+        <p>Prepárate para la batalla en este emocionante juego 2D de tanques</p>
+    </div>
+</body>
+</html>
+
+

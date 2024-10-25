@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python en el Navegador con Pyodide</title>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Ejecutar Código Python</h1>
+    <button onclick="runPythonCode()">Ejecutar Algoritmo</button>
+    <div class="result" id="output"></div>
+</div>
+
+<script>
+    // Cargar Pyodide desde el CDN y ejecutar código Python
+    async function runPythonCode() {
+        // Asegúrate de que Pyodide esté cargado
+        let pyodide = await loadPyodide();
+
+        // Define el código Python que quieres ejecutar
+        var codigoPy = `
+            def my_algorithm(x):
+                return x * 2
+
+            my_algorithm(2024)
+        `;
+
+        // Ejecuta el código Python
+        let result = await pyodide.runPythonAsync(codigoPy);
+
+        // Muestra el resultado en el div con id 'output'
+        document.getElementById('output').innerText = 'Resultado: ' + result;
+    }
+</script>
+
+</body>
+</html>

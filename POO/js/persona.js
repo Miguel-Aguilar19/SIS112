@@ -1,5 +1,9 @@
 class Persona {
+<<<<<<< Updated upstream
     constructor(nombre, edad, carrera,universidad) {
+=======
+    constructor(nombre, edad, carrera, universidad) {
+>>>>>>> Stashed changes
       this.nombre = nombre;
       this.edad = edad;
       this.carrera = carrera;
@@ -20,6 +24,7 @@ class Persona {
     }
 
     uni() {
+<<<<<<< Updated upstream
       return 'Estudio en la' + this.universidad;
     }
   
@@ -32,6 +37,10 @@ class Persona {
           this.nombre = prompt('Ingrese un nuevo nombre');
       }
       return '¡Hola, mi nombre es ' + this.nombre;
+=======
+        return 'Me encuentro en la' + this.universidad;
+    }
+>>>>>>> Stashed changes
   }
 
     modificar_cumpleanios() {
@@ -87,16 +96,29 @@ class Persona {
 
 
   // Crear una instancia de la clase Persona
+<<<<<<< Updated upstream
   const persona = new Persona('Miguel', 18, 'Ing. Industrial', ' UCB');
+=======
+  const persona = new Persona( 'Miguel', 18, 'Ingeniería Industrial',' U. Catolica Boliviana');
+  
+ 
+  
+  
+
+>>>>>>> Stashed changes
   
 
   // Inicializar los elementos HTML
   const saludar = document.getElementById('saludar');
   const edad = document.getElementById('edad');
   const carrera = document.getElementById('carrera');
+<<<<<<< Updated upstream
   const uni = document.getElementById('universidad');
 
 
+=======
+  const Universidad = document.getElementById('Universidad');
+>>>>>>> Stashed changes
   
  
   
@@ -115,6 +137,7 @@ class Persona {
     carrera.textContent = persona.estudiar();
   }
 
+<<<<<<< Updated upstream
   // Funcion para universidad
   function botonUni() {
     uni.textContent = persona.uni();
@@ -157,6 +180,11 @@ class Persona {
 
   function botonEliminar_Universidad() {
     uni.textContent = persona.eliminar_universidad();
+=======
+  //Funcion para universidad
+  function botonUni() {
+    Universidad.textContent = persona.uni();
+>>>>>>> Stashed changes
   }
 
 
