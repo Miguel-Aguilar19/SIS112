@@ -1,14 +1,15 @@
 //Selecionamos el vanvas y el contexto
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
+var utils = new Utils();
 
 //Funcion para ajustar el tamaño de canvas a la ventana
 function resizeCanvas(){
     canvas.width = window.innerWidth * 0.9;
     canvas.height = window.innerHeight * 0.9;
     
-    canvas.width = Math.round(canvas.width / 50) * 50;
-    canvas.height = Math.round(canvas.height / 50) * 50;
+    canvas.width = Utils.RoundTablero(canvas.widt);
+    canvas.height = Utils.RoundTablero(canvas.height);
 
 }
 
