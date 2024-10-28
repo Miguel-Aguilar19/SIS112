@@ -9,7 +9,8 @@ class Persona {
       this.carrera = carrera;
       this.universidad = universidad;
     }
-  //CREAR
+  
+    //CREAR
     saludar() {
       return 'Hola, mi nombre es ' + this.nombre;
     }
@@ -26,7 +27,9 @@ class Persona {
 <<<<<<< Updated upstream
       return 'Estudio en la' + this.universidad;
     }
-
+  
+  
+    //MODIFICAR
     modificar_saludo() {
       this.nombre = prompt('Ingrese un nuevo nombre');
         while (/\d/.test(this.nombre) || this.nombre.trim() === '') {
@@ -39,7 +42,7 @@ class Persona {
     }
 >>>>>>> Stashed changes
   }
-  //MODIFICAR
+
     modificar_cumpleanios() {
       this.edad = prompt('Ingrese su edad nuevamente');
     while (!/^\d+$/.test(this.edad) || parseInt(this.nombre)<= 0) {
@@ -67,7 +70,8 @@ class Persona {
       return'En la  ' +  this.universidad;
     }
 
-  //ELIMINAR
+  
+    //ELIMINAR
 
     eliminar_nombre() {
       this.nombre = undefined;
@@ -90,6 +94,7 @@ class Persona {
 
 
 
+
   // Crear una instancia de la clase Persona
 <<<<<<< Updated upstream
   const persona = new Persona('Miguel', 18, 'Ing. Industrial', ' UCB');
@@ -102,6 +107,7 @@ class Persona {
 
 >>>>>>> Stashed changes
   
+
   // Inicializar los elementos HTML
   const saludar = document.getElementById('saludar');
   const edad = document.getElementById('edad');
@@ -113,6 +119,8 @@ class Persona {
 =======
   const Universidad = document.getElementById('Universidad');
 >>>>>>> Stashed changes
+  
+ 
   
   // Función para saludar
   function botonSaludar() {
@@ -154,6 +162,8 @@ class Persona {
   function botonModificar_Universidad() {
     uni.textContent = persona.modificar_universidad();
   }
+
+
 
   //Eliminar
   function botonEliminar_Nombre() {
