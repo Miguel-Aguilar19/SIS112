@@ -4,18 +4,18 @@ class shoot{
     velocidad;
     direccion;
 
-    constructor( _posX, _posY, _velocidad, _direccion){
+    constructor(_posX, _posY, _velocidad, _direccion){
         this.posX = _posX;
         this.posY = _posY;
         this.velocidad = _velocidad;
         this.direccion = _direccion;
     }
 
-    actualizarPosicion(){
+    actualizarposicion(){
 
     }
 
-    verificarPosicion(){
-        
+    verificarposicion(){
+
     }
 }
