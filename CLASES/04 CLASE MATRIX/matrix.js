@@ -414,12 +414,55 @@ Ejercicio7() {
 }
 
 // Ejercicio 8: 
-Ejercicio8(){
+Ejercicio8() {
     this.vaciarMatriz();
-    for (let i = 0; i < this.filas; i++) {
-        for (let j = 0; j < this.columnas; j++) {
+    let row = 0;
+    let col = 0;
+    let direction = 0; 
+    let steps = 1;
+    let stepCount = 0;
+
+    for (let i = 0; i < this.columnas * this.filas; i++) {
+        this.matriz[row][col] = 1;
+
+        stepCount++;
+
+        if (stepCount === steps) {
+            stepCount = 0;
+            direction = (direction + 1) % 4;
+            if (direction % 2 === 0) {
+                steps++;
+            }
+        }
+
+        switch (direction) {
+            case 0: 
+                if (col + 1 >= this.columnas) {
+                    break; 
+                }
+                col++;
+                break;
+            case 1:
+                if (row + 1 >= this.filas) {
+                    break;
+                }
+                row++;
+                break;
+            case 2: 
+                if (col - 1 < 0) {
+                    break; 
+                }
+                col--;
+                break;
+            case 3:
+                if (row - 1 < 0) {
+                    break; 
+                }
+                row--;
+                break;
         }
     }
+
     this.dibujarMatriz();
 }
 
@@ -517,14 +560,21 @@ Ejercicio13(){
 // Ejercicio 14: 
 Ejercicio14() {
     this.vaciarMatriz();
-    for (let i = 0; i < this.filas; i++) {
-        for (let j = 0; j < this.columnas; j++) {
+    const midRow = Math.floor(this.filas / 2);
+    const midCol = Math.floor(this.columnas / 2);
+
+    for (let i = 0; i < this.columnas; i++) {
+        for (let j = 0; j < this.filas; j++) {
+            if (i === midCol || j === midRow || Math.abs(i - midCol) === Math.abs(j - midRow)) {
+                this.matriz[i][j] = 1;
+            } else {
+                this.matriz[i][j] = 0;
+            }
         }
     }
-    this.dibujarMatriz()
-}
-
-
+    this.dibujarMatriz();
+}     
+ 
 // Ejercicio 15: 
 Ejercicio15() {
     this.vaciarMatriz();
