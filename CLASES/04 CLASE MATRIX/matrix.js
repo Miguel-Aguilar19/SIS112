@@ -464,14 +464,28 @@ Ejercicio11(){
 // Ejercicio 12: 
 Ejercicio12() {
     this.vaciarMatriz();
+
     const centro = Math.floor(this.columnas / 2);
-    for (let i = 0; i <= centro; i++) {
-        for (let j = centro - i; j <= centro + i; j++) {
-            this.matriz[i][j] = 1;
+    const alturaPiramide = Math.floor(this.filas / 2);
+
+    for (let i = 0; i < alturaPiramide; i++) {
+      const inicio = centro - i;
+      const fin = centro + i;
+      for (let j = 0; j < this.columnas; j++) {
+        if (j >= inicio && j <= fin) {
+          this.matriz[i][j] = 1; 
+        } else {
+          this.matriz[i][j] = 0; 
         }
+      }
+    }
+    for (let i = alturaPiramide; i < this.filas; i++) {
+      for (let j = 0; j < this.columnas; j++) {
+        this.matriz[i][j] = 0;
+      }
     }
     this.dibujarMatriz();
-}
+  }
 
 // Ejercicio 13: 
 Ejercicio13(){
@@ -501,13 +515,13 @@ Ejercicio13(){
     this.dibujarMatriz();
 }
 // Ejercicio 14: 
-Ejercicio14(){
+Ejercicio14() {
     this.vaciarMatriz();
     for (let i = 0; i < this.filas; i++) {
         for (let j = 0; j < this.columnas; j++) {
         }
     }
-    this.dibujarMatriz();
+    this.dibujarMatriz()
 }
 
 
