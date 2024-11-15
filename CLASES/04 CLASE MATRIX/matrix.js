@@ -315,6 +315,338 @@ class Matriz {
             this.dibujarMatriz();
         }
 
+//EJERCICIOS DEL PRACTICO DE MATRICES PARA EL 15//11//24
+    // Ejercicio 1:
+Ejercicio1() {
+    this.vaciarMatriz();
+    for (let i = 0; i < this.filas; i++) {
+        for (let j = 0; j < this.columnas; j++) {
+            this.matriz[i][j] = 1;
+        }
+    }
+    this.dibujarMatriz();
+}
+
+// Ejercicio 2:
+Ejercicio2() {
+    this.vaciarMatriz();
+    for (let i = 0; i < this.filas; i++) {
+        for (let j = 0; j < this.columnas; j++) {
+            if (i === 0 || i === this.filas - 1 || j === 0 || j === this.columnas - 1) {
+                this.matriz[i][j] = 0;
+            } else {
+                this.matriz[i][j] = 1;
+            }
+        }
+    }
+    this.dibujarMatriz();
+}
+
+// Ejercicio 3:
+Ejercicio3(){
+    this.vaciarMatriz();
+    for (let i = 0; i < this.filas; i++) {
+        for (let j = 0; j < this.columnas; j++) {
+            if (i === 4 || j === 4 ) {
+                this.matriz[i][j] = 1;
+            } else {
+                this.matriz[i][j] = 0;
+            }
+        }
+    }
+    this.dibujarMatriz();
+}
+
+// Ejercicio 4: 
+Ejercicio4(){
+    this.vaciarMatriz();
+    for (let i = 0; i < this.filas; i++) {
+        for (let j = 0; j < this.columnas; j++) {
+            if (i === 0 || i === this.filas - 1 || j === 0 || j === this.columnas - 1) {
+                this.matriz[i][j] = 1;
+            } else if (i === 1 || i === this.filas - 2 || j === 1 || j === this.columnas - 2) {
+                this.matriz[i][j] = 0;
+            } else if (i === j || i + j === this.columnas - 1) {
+                this.matriz[i][j] = 2;
+            }
+        }
+    }
+    this.dibujarMatriz();
+}
+
+// Ejercicio 5:
+Ejercicio5() {
+    this.vaciarMatriz();
+    let terceraParte = Math.floor(this.filas / 3);
+    for (let i = 0; i < this.filas; i++) {
+        for (let j = 0; j < this.columnas; j++) {
+            if (i < terceraParte) {
+                this.matriz[i][j] = 1;
+            } else if (i < 2 * terceraParte) {
+                this.matriz[i][j] = 2;
+            } else {
+                this.matriz[i][j] = 0;
+            }
+        }
+    }
+    this.dibujarMatriz();
+}
+
+// Ejercicio 6: 
+Ejercicio6() {
+    this.vaciarMatriz();
+    for (let i = 0; i < this.filas; i++) {
+        let valor = i % 2 === 0 ? 1 : 0;
+        for (let j = 0; j < this.columnas; j++) {
+            this.matriz[i][j] = valor;
+        }
+    }
+    this.dibujarMatriz();
+}
+
+// Ejercicio 7: 
+Ejercicio7() {
+    this.vaciarMatriz();
+    for (let i = 0; i < this.filas; i++) {
+        this.matriz[i][i] = 1;
+    }
+    this.dibujarMatriz();
+}
+
+// Ejercicio 8: 
+Ejercicio8(){
+    this.vaciarMatriz();
+    for (let i = 0; i < this.filas; i++) {
+        for (let j = 0; j < this.columnas; j++) {
+        }
+    }
+    this.dibujarMatriz();
+}
+
+// Ejercicio 9: 
+Ejercicio9() {
+    this.vaciarMatriz();
+    for (let i = 0; i < this.filas; i++) {
+        for (let j = 0; j <= i; j++) {
+            this.matriz[i][j] = 1;
+        }
+    }
+    this.dibujarMatriz();
+}
+
+// Ejercicio 10: 
+Ejercicio10() {
+    this.vaciarMatriz();
+    for (let i = 0; i < this.filas; i++) {
+        for (let j = this.columnas - i - 1; j < this.columnas; j++) {
+            this.matriz[i][j] = 1;
+        }
+    }
+    this.dibujarMatriz();
+}
+
+// Ejercicio 11: 
+Ejercicio11(){
+    this.vaciarMatriz();
+
+    for (let i = 0; i < this.filas; i++) {
+        for (let j = 0; j < this.columnas; j++) {
+            if (i % 2 === 0 || j === 0 || j === this.columnas - 1) {
+                this.matriz[i][j] = 1;
+            } else {
+                this.matriz[i][j] = 0;
+            }
+        }
+    }
+    this.dibujarMatriz();
+}
+
+// Ejercicio 12: 
+Ejercicio12() {
+    this.vaciarMatriz();
+    const centro = Math.floor(this.columnas / 2);
+    for (let i = 0; i <= centro; i++) {
+        for (let j = centro - i; j <= centro + i; j++) {
+            this.matriz[i][j] = 1;
+        }
+    }
+    this.dibujarMatriz();
+}
+
+// Ejercicio 13: 
+Ejercicio13(){
+    this.vaciarMatriz();
+
+    const centro = Math.floor(this.columnas / 2);
+    const alturaPiramide = Math.floor(this.filas / 2);
+
+    for (let i = 0; i < alturaPiramide; i++) {
+        const inicio = centro - i;
+        const fin = centro + i;
+
+        for (let j = inicio; j <= fin; j++) {
+            this.matriz[i][j] = 1; 
+        }
+    }
+
+    for (let i = 0; i < alturaPiramide; i++) {
+        const inicio = centro - i;
+        const fin = centro + i;
+
+        for (let j = inicio; j <= fin; j++) {
+            this.matriz[this.filas - 1 - i][j] = 1; 
+        }
+    }
+
+    this.dibujarMatriz();
+}
+// Ejercicio 14: 
+Ejercicio14(){
+    this.vaciarMatriz();
+    for (let i = 0; i < this.filas; i++) {
+        for (let j = 0; j < this.columnas; j++) {
+        }
+    }
+    this.dibujarMatriz();
+}
+
+
+// Ejercicio 15: 
+Ejercicio15() {
+    this.vaciarMatriz();
+    for (let i = 0; i < this.filas; i++) {
+        for (let j = 0; j <= i; j++) {
+            this.matriz[i][j] = 1;
+        }
+    }
+    this.dibujarMatriz();
+}
+
+// Ejercicio 16: 
+Ejercicio16() {
+    this.vaciarMatriz();
+    
+    for (let i = 0; i < this.filas; i++) {
+        for (let j = 0; j < this.columnas; j++) {
+            if (i === 0 || i === this.filas - 1 || j === 0 || j === this.columnas - 1) {
+                this.matriz[i][j] = 1;
+            }
+        }
+    }
+    for (let i = 2; i < this.filas - 2; i++) {
+        for (let j = 2; j < this.columnas - 2; j++) {
+            if (i === 2 || i === this.filas - 3 || j === 2 || j === this.columnas - 3) {
+                this.matriz[i][j] = 2;
+            }
+        }
+    }
+
+    this.dibujarMatriz();
+}
+
+
+// Ejercicio 17: 
+Ejercicio17() {
+    this.vaciarMatriz();
+    for (let i = 0; i < this.filas; i++) {
+        for (let j = 0; j < this.columnas; j++) {
+            if (i === 0 || i === this.filas - 1 || j === 0 || j === this.columnas - 1) {
+                this.matriz[i][j] = 1;
+            } else if (i > 2 && i < this.filas - 3 && j > 2 && j < this.columnas - 3) {
+                this.matriz[i][j] = 2;
+            }
+        }
+    }
+    this.dibujarMatriz();
+}
+
+// Ejercicio 18: 
+Ejercicio18(){
+    this.vaciarMatriz();
+    for (let i = 0; i < this.filas; i++) {
+        for (let j = 0; j < this.columnas; j++) {
+            if (i % 2 === 0 || j === 0 || j === this.columnas - 1) {
+                this.matriz[i][j] = 1;
+            } else {
+                this.matriz[i][j] = 0;
+            }
+        }
+    }
+    this.dibujarMatriz();
+}
+
+// Ejercicio 19: 
+Ejercicio19() {
+    this.vaciarMatriz();
+    
+    for (let i = 0; i < this.filas; i++) {
+        for (let j = 0; j < this.columnas; j++) {
+            if (
+                (i % 3 === 0 && j % 3 === 0) ||  (i % 3 === 1 && j % 3 === 1) ||  (i % 3 === 2 && j % 3 === 2)) {  //No pillaba otra forma de hacerlo inge :(
+                this.matriz[i][j] = 1;
+            } else {
+                this.matriz[i][j] = 0;
+            }
+        }
+    }
+
+    this.dibujarMatriz();
+}
+
+// Ejercicio 20: 
+Ejercicio20(){
+    this.vaciarMatriz();
+
+    const tamanoRombo = 4 
+
+    for (let i = 0; i < this.filas; i++) {
+        for (let j = 0; j < this.columnas; j++) {
+            if (i < tamanoRombo && j < tamanoRombo - i) {
+                this.matriz[i][j] = 1;
+            }
+            else if (i < tamanoRombo && j >= this.columnas - tamanoRombo + i) {
+                this.matriz[i][j] = 1;
+            }
+            else if (i >= this.filas - tamanoRombo && j < tamanoRombo - (this.filas - 1 - i)) {
+                this.matriz[i][j] = 1;
+            }
+            else if (i >= this.filas - tamanoRombo && j >= this.columnas - tamanoRombo + (this.filas - 1 - i)) {
+                this.matriz[i][j] = 1;
+            }
+            else {
+                this.matriz[i][j] = 0;
+            }
+        }
+    }
+    this.dibujarMatriz();
+}
+
+// Ejercicio 21: 
+Ejercicio21() {
+    this.vaciarMatriz();
+    for (let i = 0; i < this.filas; i++) {
+        for (let j = 0; j < this.columnas; j++) {
+            this.matriz[i][j] = (i + j) % 2;
+        }
+    }
+    this.dibujarMatriz();
+}
+
+// Ejercicio 22: 
+Ejercicio22() {
+    this.vaciarMatriz();
+    const centro = Math.floor(this.filas / 2);
+    for (let i = 0; i <= centro; i++) {
+        for (let j = i; j < this.columnas - i; j++) {
+            this.matriz[i][j] = 1;
+            this.matriz[this.filas - i - 1][j] = 1;
+        }
+    }
+    this.dibujarMatriz();
+}
+
+    
+
     // Método para dibujar la matriz en el canvas
     dibujarMatriz() {
         for (let i = 0; i < this.filas; i++) {
