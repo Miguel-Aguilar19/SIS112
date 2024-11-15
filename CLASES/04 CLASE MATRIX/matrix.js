@@ -558,20 +558,28 @@ Ejercicio13(){
     this.dibujarMatriz();
 }
 // Ejercicio 14: 
-Ejercicio14() {
+Ejercicio14(){
+        
     this.vaciarMatriz();
-    const midRow = Math.floor(this.filas / 2);
-    const midCol = Math.floor(this.columnas / 2);
 
-    for (let i = 0; i < this.columnas; i++) {
-        for (let j = 0; j < this.filas; j++) {
-            if (i === midCol || j === midRow || Math.abs(i - midCol) === Math.abs(j - midRow)) {
-                this.matriz[i][j] = 1;
-            } else {
-                this.matriz[i][j] = 0;
-            }
-        }
+ for (let j = 2; j < this.columnas - 2; j++) {
+        this.matriz[1][j] = 1;
+        this.matriz[this.filas - 2][j] = 1;
     }
+    for (let i = 2; i < this.filas - 2; i++) {
+        this.matriz[i][1] = 1;
+        this.matriz[i][this.columnas - 2] = 1;
+    }
+
+    for (let j = 2; j < this.columnas - 2; j++) {
+        this.matriz[4][j] = 1;
+        this.matriz[5][j] = 1;
+    }
+    for (let i = 2; i < this.filas - 2; i++) {
+        this.matriz[i][4] = 1;
+        this.matriz[i][5] = 1;
+    }
+
     this.dibujarMatriz();
 }     
  
