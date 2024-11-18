@@ -315,6 +315,7 @@ class Matriz {
             this.dibujarMatriz();
         }
 
+        
 //EJERCICIOS DEL PRACTICO DE MATRICES PARA EL 15//11//24
     // Ejercicio 1:
 Ejercicio1() {
@@ -869,7 +870,4 @@ Ejercicio22() {
         this.ctx.fillStyle = "#fff"; // Color del texto (blanco)
         this.ctx.fillText("7", x + ancho / 2, y + alto / 2);
     }
-
-
-
 }
