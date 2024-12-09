@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The World's Hardest Game - Inicio</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Ajusta para colocar los elementos en la parte superior */
+            height: 100vh;
+            margin: 0;
+            background: url('fondo IG.gif') no-repeat center center fixed; /* Reemplaza con el nombre correcto del GIF */
+            background-size: cover; /* Asegura que el GIF cubra toda la pantalla */
+        }
+
+        /* Estilo del título */
+        h1 {
+            font-size: 3.5rem;
+            color: #ff0000;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Sombra para destacar el título */
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+            padding: 10px 20px; /* Espaciado interno */
+            border-radius: 10px; /* Bordes redondeados */
+            margin-top: 20px; /* Espaciado superior para que esté más alto */
+        }
+
+        /* Botón de inicio */
+        .start-button {
+            background-color: #00ff00; /* Verde llamativo */
+            border: 3px solid #000; /* Borde negro */
+            color: black;
+            padding: 15px 25px;
+            font-size: 1.2rem;
+            border-radius: 10px; /* Bordes redondeados */
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Sombra para resaltar el botón */
+            margin-top: 300px; /* Baja el botón considerablemente */
+        }
+
+        /* Efecto al pasar el cursor sobre el botón */
+        .start-button:hover {
+            background-color: #32cd32; /* Verde más oscuro */
+            transform: scale(1.05); /* Efecto de agrandar */
+        }
+    </style>
+</head>
+<body>
+    <h1>The World's Hardest Game</h1>
+    <button class="start-button" onclick="window.location.href='Impossible-Game.html'">¡Comenzar Juego!</button>
+</body>
+</html>
